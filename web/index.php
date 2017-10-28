@@ -18,7 +18,7 @@
 				<nav class="left">
 					<a href="#menu"><span>Menu</span></a>
 				</nav>
-				<a href="index.html" class="logo">intensify</a>
+				<a href="index.html" class="logo">Team Huang</a>
 			</header>
 
 		<!-- Menu -->
@@ -33,7 +33,7 @@
 				<div class="content">
 					<h1>Welcome to Team Huang</h1>
 					<p>安安你好嗎?</p>
-					<input value="type chat id" id="typeid" onclick="TypeId()"></input>
+					<input value="type chat id" id="typeid" onclick="TypeId()" onkeypress="Enterdetect()"></input>
 					<ul class="actions">
 						<li><br><a onclick="authenticate()" class="button scrolly">Authenticate</a></li>
 					</ul>
