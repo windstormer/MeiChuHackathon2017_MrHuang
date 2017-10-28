@@ -19,7 +19,10 @@ class HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         length = int(self.headers['Content-Length'])
         data = str(self.rfile.read(length), encoding='utf-8')
         for client in clients:
-            client.send(data)
+            try:
+                client.send(bytes(data,encoding='utf-8'))
+            except:
+                pass
         path = os.path.join(self.translate_path(self.path),'output')
         f = open(path,'w')
         f.write(data)
